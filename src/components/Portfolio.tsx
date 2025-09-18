@@ -131,7 +131,7 @@ export default function Portfolio() {
   const uniqueSkills = [...new Set(allSkills)].sort();
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-6 py-8 md:px-8">
+    <div className="w-full max-w-4xl mx-auto px-4 py-8 md:px-8 overflow-x-hidden">
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2>Selected Work</h2>
@@ -162,7 +162,7 @@ export default function Portfolio() {
       <div className="space-y-8">
         {projects.map((project, index) => (
           <div key={index} className="border-b border-border pb-8 last:border-b-0 relative">
-            <div className="flex gap-4">
+            <div className="flex gap-4 w-full min-w-0">
               {/* Thumbnail - hidden on mobile */}
               {
                 project.thumbnail && (
@@ -177,8 +177,8 @@ export default function Portfolio() {
               }
 
               {/* Content */}
-              <div className="flex-1 min-w-0">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
+              <div className="flex-1 min-w-0 overflow-hidden">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 w-full">
                   <h3 className="font-medium">{project.title}</h3>
                   <span className="text-sm text-muted-foreground mt-1 sm:mt-0">{project.year}</span>
                 </div>
@@ -196,7 +196,7 @@ export default function Portfolio() {
                 </p>
 
                 {/* Links */}
-                <div className="flex flex-wrap gap-3 mb-4">
+                <div className="flex flex-wrap gap-3 mb-4 w-full">
                   {project.github && (
                     <a
                       href={project.github}
@@ -232,7 +232,7 @@ export default function Portfolio() {
                   )}
                 </div>
 
-                <div className="flex flex-wrap gap-2 w-d">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}

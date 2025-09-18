@@ -987,6 +987,10 @@
     min-height: 100vh;
   }
 
+  .min-h-dvh {
+    min-height: 100dvh;
+  }
+
   .min-h-svh {
     min-height: 100svh;
   }
@@ -1129,6 +1133,14 @@
 
   .min-w-\[var\(--radix-select-trigger-width\)\] {
     min-width: var(--radix-select-trigger-width);
+  }
+
+  .min-w-dvw {
+    min-width: 100dvw;
+  }
+
+  .max-w-dvw {
+    max-width: 100dvw;
   }
 
   .flex-1 {

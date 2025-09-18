@@ -32,8 +32,8 @@ export default function App() {
 
   if (showPortfolio) {
     return (
-      <div className="min-h-screen bg-background">
-        <div className="container mx-auto px-4 py-8">
+      <div className="min-h-dvh w-full bg-background overflow-x-hidden">
+        <div className="w-full mx-auto px-4 py-8">
           <button
             onClick={() => setShowPortfolio(false)}
             className="mb-8 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -47,7 +47,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-dvh bg-background flex flex-col">
       {/* Main content area with ASCII globe */}
       <div className="flex-1 flex items-center justify-center px-4">
         <GlobeAscii onClick={toggleDarkMode} />
