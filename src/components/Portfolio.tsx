@@ -7,6 +7,7 @@ import logo_pppl from '../assets/logo_pppl.png';
 import logo_pton from '../assets/logo_pton.png';
 import logo_ieee from '../assets/logo_ieee.png';
 import tr from '../assets/transparent.png';
+import paper from '../assets/paper_lowres.png';
 
 export default function Portfolio() {
   const projects = [
@@ -19,7 +20,7 @@ export default function Portfolio() {
       type: "research",
       affiliation: "Princeton Plasma Physics Laboratory",
       logo: logo_pppl,
-      thumbnail: "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrJTIwdmlzdWFsaXphdGlvbnxlbnwxfHx8fDE3NTgwMzEzNDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrJTIwdmlzdWFsaXphdGlvbnxlbnwxfHx8fDE3NTgwMzEzNDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       github: "https://github.com/johndoe/neural-viz",
       //paper: "https://arxiv.org/pdf/2509.01234",
     },
@@ -30,9 +31,9 @@ export default function Portfolio() {
       tech: ["Python", "Pytorch", "Matplotlib", "NumPy", "Linear Algebra"],
       year: "2025",
       type: "research",
-      affiliation: "Princeton Neuroscience Institute, Princeton University",
+      // affiliation: "Princeton Neuroscience Institute, Princeton University",
       logo: logo_pton,
-      thumbnail: "https://images.unsplash.com/photo-1623357247199-b5e97b20acb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNlYXJjaCUyMHBhcGVyJTIwc2NpZW50aWZpY3xlbnwxfHx8fDE3NTgwNjY2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1623357247199-b5e97b20acb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNlYXJjaCUyMHBhcGVyJTIwc2NpZW50aWZpY3xlbnwxfHx8fDE3NTgwNjY2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       //paper: "https://doi.org/10.1016/j.neuropsychologia.2024.example"
     },
     {
@@ -44,7 +45,7 @@ export default function Portfolio() {
       type: "research",
       affiliation: "New Jersey Institute of Technology",
       logo: logo_njit,
-      thumbnail: "https://images.unsplash.com/photo-1692598578454-570cb62ecf2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwY29kZXxlbnwxfHx8fDE3NTgwNjY2NTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      thumbnail: paper,
       //github: "https://github.com/johndoe/attention-interpreter",
       //live: "https://attention-viz.netlify.app"
     },
@@ -57,7 +58,7 @@ export default function Portfolio() {
       type: "project",
       affiliation: "NJIT IEEE",
       logo: logo_ieee,
-      thumbnail: "https://images.unsplash.com/photo-1549925245-f20a1bac6454?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW1vcnklMjBicmFpbiUyMG5ldXJvc2NpZW5jZXxlbnwxfHx8fDE3NTgwNjY2NTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1549925245-f20a1bac6454?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW1vcnklMjBicmFpbiUyMG5ldXJvc2NpZW5jZXxlbnwxfHx8fDE3NTgwNjY2NTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       github: "https://github.com/astarryknight/ai-ml",
       live: "https://astarryknight.github.io/ai-ml/"
     },
@@ -70,7 +71,7 @@ export default function Portfolio() {
       type: "project",
       // affiliation: "DeepMind",
       logo: tr,
-      thumbnail: "https://images.unsplash.com/photo-1643888685885-366ca3a7e7c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHlzaXMlMjB0b29sfGVufDF8fHx8MTc1ODA2NjY2MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1643888685885-366ca3a7e7c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHlzaXMlMjB0b29sfGVufDF8fHx8MTc1ODA2NjY2MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       github: "https://github.com/astarryknight/Notchable"
     },
     {
@@ -82,7 +83,7 @@ export default function Portfolio() {
       type: "project",
       // affiliation: "Meta Reality Labs",
       logo: tr,
-      thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       github: "https://github.com/astarryknight/CNN_digit_classifier"
     },
     {
@@ -94,7 +95,7 @@ export default function Portfolio() {
       type: "project",
       // affiliation: "Meta Reality Labs",
       logo: tr,
-      thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       github: "https://github.com/astarryknight/IdentifAI_Recognition"
     },
     {
@@ -106,7 +107,7 @@ export default function Portfolio() {
       type: "project",
       // affiliation: "Meta Reality Labs",
       logo: tr,
-      thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       github: "https://github.com/astarryknight/coptic_wordle_react",
       live: "https://astarryknight.github.io/coptic_wordle_react/"
     },
@@ -119,7 +120,7 @@ export default function Portfolio() {
       type: "project",
       // affiliation: "Meta Reality Labs",
       logo: tr,
-      thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // thumbnail: "https://images.unsplash.com/photo-1732704573802-8ec393009148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMGNvbXB1dGVyJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODA1MjE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       github: "https://github.com/astarryknight/copt37",
       //live: "https://astarryknight.github.io/coptic_wordle_react/"
     }
@@ -163,13 +164,17 @@ export default function Portfolio() {
           <div key={index} className="border-b border-border pb-8 last:border-b-0 relative">
             <div className="flex gap-4">
               {/* Thumbnail - hidden on mobile */}
-              <div className="hidden md:block flex-shrink-0 w-24 h-32">
-                <ImageWithFallback
-                  src={project.thumbnail}
-                  alt={`${project.title} thumbnail`}
-                  className="w-full h-full object-cover rounded"
-                />
-              </div>
+              {
+                project.thumbnail && (
+                  <div className="hidden md:block flex-shrink-0 w-24 h-32">
+                    <ImageWithFallback
+                      src={project.thumbnail}
+                      alt={`${project.title} thumbnail`}
+                      className="w-full h-full object-cover rounded"
+                    />
+                  </div>
+                )
+              }
 
               {/* Content */}
               <div className="flex-1 min-w-0">
