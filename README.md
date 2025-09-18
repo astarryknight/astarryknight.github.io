@@ -1,4 +1,4 @@
-# John Girgis Portfolio
+# John G's Portfolio
 
 ![Build Status](https://img.shields.io/github/deployments/astarryknight/astarryknight.github.io/github-pages?label=build&logo=github)
 ![License](https://img.shields.io/github/license/astarryknight/astarryknight.github.io)
