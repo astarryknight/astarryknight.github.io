@@ -16,7 +16,7 @@ export default function GlobeAscii({ onClick }: GlobeAsciiProps) {
         <ImageWithFallback
           src={globeGif}
           alt="Globe ASCII Animation - Click to toggle dark mode"
-          className="w-64 h-64 object-contain select-none dark:invert"
+          className="w-80 h-80 object-contain select-none dark:invert max-w-none"
           draggable="false"
         />
       </button>
