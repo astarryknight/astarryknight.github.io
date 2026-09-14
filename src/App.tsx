@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import GlobeAscii from "./components/GlobeAscii";
+import HomeProjects from "./components/HomeProjects";
 import Portfolio from "./components/Portfolio";
+import "./Home.css";
 
 export default function App() {
   const [showPortfolio, setShowPortfolio] = useState(false);
@@ -31,31 +33,16 @@ export default function App() {
   };
 
   if (showPortfolio) {
-    return (
-      <div className="min-h-dvh w-full bg-background overflow-x-hidden">
-        <div className="w-full mx-auto px-4 py-8">
-          <button
-            onClick={() => setShowPortfolio(false)}
-            className="mb-8 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            ← Back
-          </button>
-          <Portfolio />
-        </div>
-      </div>
-    );
+    return <Portfolio onBack={() => setShowPortfolio(false)} />;
   }
 
   return (
-    <div className="min-h-dvh bg-background flex flex-col">
-      {/* Main content area with ASCII globe */}
-      <div className="flex-1 flex items-center justify-center px-4">
-        <GlobeAscii onClick={toggleDarkMode} />
-      </div>
+    <div className="home-page">
+      <HomeProjects />
 
-      {/* Footer content */}
-      <div className="pb-12 px-8">
-        <h1 className="mb-1" style={{ fontSize: "2.5rem" }}>
+      <main className="home-layout">
+        <section className="home-intro" aria-label="About John Girgis">
+        <h1 className="home-name mb-1">
           John Girgis
         </h1>
         <div className="text-sm text-muted-foreground mb-3">
@@ -64,17 +51,54 @@ export default function App() {
         <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
           <button
             onClick={() => setShowPortfolio(true)}
-            className="hover:text-foreground transition-colors underline decoration-dotted underline-offset-4"
+            className="home-research-link rounded-sm font-normal underline decoration-dotted underline-offset-4 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            swe, neuroscience, and machine learning
+            computational neuroscience + machine learning
           </button>
           <br />
-          <span>ML & neuro researcher @ <span className="italic">princeton</span>, <span className="italic">njit</span> (f25)</span>
+          <span>
+            research @ <span className="italic">yale</span>,{" "}
+            <span className="italic">princeton</span> &amp;{" "}
+            <span className="italic">njit</span>
+          </span>
           <br />
           honors computer engineering {" "}
-          <span className="italic">@ njit</span>
+          <span className="italic">@ njit</span> · 2024—2028
         </p>
-      </div>
+        <nav
+          aria-label="Professional profiles"
+          className="mt-4 flex gap-4 text-sm text-muted-foreground"
+        >
+          <a
+            href="https://www.linkedin.com/in/john-girgis-nj/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm underline decoration-dotted underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            linkedin ↗
+          </a>
+          <a
+            href="https://github.com/astarryknight"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm underline decoration-dotted underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            github ↗
+          </a>
+          <a
+            aria-disabled="true"
+            title="CV coming soon"
+            className="cursor-default rounded-sm underline decoration-dotted underline-offset-4 opacity-60"
+          >
+            cv ↗
+          </a>
+        </nav>
+        </section>
+
+        <div className="home-globe">
+          <GlobeAscii onClick={toggleDarkMode} />
+        </div>
+      </main>
     </div>
   );
 }

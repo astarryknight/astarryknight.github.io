@@ -1,0 +1,389 @@
+.home-project-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.home-notch {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 50%;
+  width: 7.75rem;
+  height: 1.75rem;
+  overflow: hidden;
+  transform: translateX(-50%);
+  border: 1px solid #181818;
+  border-top: 0;
+  border-radius: 0 0 0.875rem 0.875rem;
+  background: #050505;
+  color: #f5f5f5;
+  transition:
+    width 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-notch--open {
+  width: min(21rem, calc(100% - 2rem));
+  height: 10.5rem;
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+
+.home-notch-trigger {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.75rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.home-notch-camera {
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #20252d;
+  box-shadow: inset 0 0 0 1px #303947;
+}
+
+.home-notch-panel {
+  padding: 2.35rem 1.25rem 1.25rem;
+  animation: home-notch-panel-in 180ms ease-out both;
+}
+
+.home-notch-trigger:focus-visible,
+.home-notch-project a:focus-visible,
+.course-book-link:focus-visible,
+.memento-glasses-link:focus-visible,
+.cera-ring-trigger:focus-visible,
+.cera-document-header button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.home-notch-trigger:focus-visible,
+.home-notch-project a:focus-visible {
+  outline-color: #f5f5f5;
+}
+
+.home-notch-label {
+  color: #9a9a9a;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-notch-project-heading strong {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.home-notch-project {
+  padding-top: 0.25rem;
+}
+
+.home-notch-project > p {
+  margin-top: 0.65rem;
+  color: #b7b7b7;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.home-notch-project a {
+  display: inline-block;
+  margin-top: 0.65rem;
+  color: #f5f5f5;
+  font-size: 0.75rem;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.25rem;
+}
+
+.home-project-hover-label {
+  pointer-events: none;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
+}
+
+.home-notch-hover-label {
+  position: fixed;
+  z-index: 20;
+  top: 2.35rem;
+  left: 50%;
+  transform: translate(-50%, -0.2rem);
+}
+
+.home-notch:hover + .home-notch-hover-label,
+.home-notch:focus-within + .home-notch-hover-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.home-notch.home-notch--open + .home-notch-hover-label {
+  opacity: 0;
+  transform: translate(-50%, -0.2rem);
+}
+
+.memento-glasses-link {
+  position: fixed;
+  z-index: 20;
+  top: 1.25rem;
+  right: 1.75rem;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  color: var(--muted-foreground);
+  transition: color 150ms ease;
+}
+
+.course-book-link {
+  position: fixed;
+  z-index: 20;
+  top: 1.25rem;
+  left: 1.75rem;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  color: var(--muted-foreground);
+  transition: color 150ms ease;
+}
+
+.memento-glasses-link svg,
+.course-book-link svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.memento-glasses-link:hover,
+.course-book-link:hover {
+  color: var(--foreground);
+}
+
+.memento-glasses-link .home-project-hover-label,
+.cera-ring-trigger .home-project-hover-label {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 0.2rem);
+  transform: translate(0.2rem, -50%);
+}
+
+.course-book-link .home-project-hover-label {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 0.2rem);
+  transform: translate(-0.2rem, -50%);
+}
+
+.memento-glasses-link:hover .home-project-hover-label,
+.memento-glasses-link:focus-visible .home-project-hover-label,
+.cera-ring-trigger:hover .home-project-hover-label,
+.cera-ring-trigger:focus-visible .home-project-hover-label {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.course-book-link:hover .home-project-hover-label,
+.course-book-link:focus-visible .home-project-hover-label {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.cera-ring-trigger {
+  position: fixed;
+  z-index: 20;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+}
+
+.cera-ring-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.cera-ring-trigger:hover .cera-ring-icon {
+  transform: scale(1.18);
+  background: currentColor;
+}
+
+.cera-document-dialog {
+  width: min(calc(100% - 2rem), 36rem);
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  overflow: auto;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--foreground);
+}
+
+.cera-document-dialog::backdrop {
+  background: color-mix(in srgb, var(--background) 76%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.cera-document {
+  display: flex;
+  min-height: min(46rem, calc(100dvh - 2rem));
+  flex-direction: column;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: var(--background);
+  box-shadow: 0 1.5rem 5rem color-mix(in srgb, var(--foreground) 14%, transparent);
+}
+
+.cera-document-header,
+.cera-document-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cera-document-header button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.cera-document-title {
+  margin-top: clamp(4rem, 10vh, 7rem);
+}
+
+.cera-document-title p {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cera-document-title h2 {
+  margin-top: 0.3rem;
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.cera-document-summary {
+  max-width: 28rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.cera-document-placeholder {
+  display: grid;
+  min-height: 12rem;
+  flex: 1;
+  place-items: center;
+  margin-top: 3rem;
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.cera-document-placeholder span {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cera-document-footer {
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+@keyframes home-notch-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+}
+
+@media (max-width: 40rem) {
+  .home-notch--open {
+    width: calc(100% - 1rem);
+  }
+
+  .cera-ring-trigger {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .memento-glasses-link {
+    top: 0.5rem;
+    right: 0.75rem;
+  }
+
+  .course-book-link {
+    top: 0.5rem;
+    left: 0.75rem;
+  }
+
+  .cera-document {
+    min-height: calc(100dvh - 2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-notch,
+  .cera-ring-icon,
+  .memento-glasses-link,
+  .course-book-link,
+  .home-project-hover-label {
+    transition: none;
+  }
+
+  .home-notch-panel {
+    animation: none;
+  }
+}

@@ -10,7 +10,7 @@ export default function GlobeAscii({ onClick }: GlobeAsciiProps) {
     <div className="flex items-center justify-center">
       <button
         onClick={onClick}
-        className="transition-scale hover:scale-105 active:scale-95 focus:outline-none rounded-lg"
+        className="rounded-lg transition-scale hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background"
         aria-label="Toggle dark mode"
       >
         <ImageWithFallback
