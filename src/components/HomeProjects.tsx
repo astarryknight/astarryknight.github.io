@@ -1,6 +1,9 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { BookOpen, Glasses } from "lucide-react";
+import ceraDocumentPreview from "../assets/cera-one-document-preview.png";
 import "./HomeProjects.css";
+
+const ceraDocumentUrl = "/documents/cera-one.pdf";
 
 export default function HomeProjects() {
   const [notchOpen, setNotchOpen] = useState(false);
@@ -153,35 +156,44 @@ export default function HomeProjects() {
       >
         <article className="cera-document">
           <header className="cera-document-header">
-            <p>Concept 001&nbsp;&nbsp; / &nbsp;&nbsp;2026</p>
-            <button type="button" onClick={closeDocument}>
-              Close
-            </button>
+            <div>
+              <h2 id={`${documentId}-title`}>Cera One</h2>
+              <p>Technical overview · 2026</p>
+            </div>
+            <nav aria-label="Cera One document controls">
+              <a
+                href={ceraDocumentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open PDF ↗
+              </a>
+              <button type="button" onClick={closeDocument} autoFocus>
+                Close
+              </button>
+            </nav>
           </header>
 
-          <div className="cera-document-title">
-            <p>Wearable accessibility</p>
-            <h2 id={`${documentId}-title`}>Cera One</h2>
-          </div>
-
-          <p className="cera-document-summary">
-            Developing a dry-sEMG wearable band to add accessibility control
-            to daily-use devices.
+          {documentOpen && (
+            <div className="cera-document-viewer">
+              <a
+                href={ceraDocumentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Read the complete Cera One technical overview PDF"
+              >
+                <img
+                  src={ceraDocumentPreview}
+                  alt="First page of the Cera One technical overview, showing the wearable design visualization and prototype development plan"
+                  width={1224}
+                  height={1584}
+                />
+              </a>
+            </div>
+          )}
+          <p className="cera-document-help">
+            Preview · 1 of 7 pages. Open PDF to read the complete document.
           </p>
-
-          <div
-            className="cera-document-placeholder"
-            role="img"
-            aria-label="Cera One documentation pending"
-          >
-            <span>Documentation pending</span>
-          </div>
-
-          <footer className="cera-document-footer">
-            <span>Dry sEMG</span>
-            <span>Wearable input</span>
-            <span>Accessible control</span>
-          </footer>
         </article>
       </dialog>
     </>

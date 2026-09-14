@@ -72,7 +72,9 @@
 .course-book-link:focus-visible,
 .memento-glasses-link:focus-visible,
 .cera-ring-trigger:focus-visible,
-.cera-document-header button:focus-visible {
+.cera-document-header a:focus-visible,
+.cera-document-header button:focus-visible,
+.cera-document-viewer a:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 3px;
 }
@@ -249,7 +251,7 @@
 }
 
 .cera-document-dialog {
-  width: min(calc(100% - 2rem), 36rem);
+  width: min(calc(100% - 2rem), 56rem);
   max-width: none;
   max-height: calc(100dvh - 2rem);
   margin: auto;
@@ -267,23 +269,49 @@
 
 .cera-document {
   display: flex;
-  min-height: min(46rem, calc(100dvh - 2rem));
+  height: min(58rem, calc(100dvh - 2rem));
+  min-height: 0;
   flex-direction: column;
-  padding: clamp(1.5rem, 5vw, 3rem);
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   background: var(--background);
   box-shadow: 0 1.5rem 5rem color-mix(in srgb, var(--foreground) 14%, transparent);
 }
 
-.cera-document-header,
-.cera-document-footer {
+.cera-document-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   color: var(--muted-foreground);
   font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.cera-document-header h2 {
+  color: var(--foreground);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.cera-document-header nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.cera-document-header a {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.25rem;
+}
+
+.cera-document-header a:hover,
+.cera-document-header button:hover {
+  color: var(--foreground);
 }
 
 .cera-document-header button {
@@ -295,51 +323,35 @@
   cursor: pointer;
 }
 
-.cera-document-title {
-  margin-top: clamp(4rem, 10vh, 7rem);
-}
-
-.cera-document-title p {
-  color: var(--muted-foreground);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.cera-document-title h2 {
-  margin-top: 0.3rem;
-  font-size: clamp(2.5rem, 9vw, 4.5rem);
-  font-weight: 300;
-  line-height: 0.95;
-  letter-spacing: -0.06em;
-}
-
-.cera-document-summary {
-  max-width: 28rem;
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.cera-document-placeholder {
-  display: grid;
-  min-height: 12rem;
+.cera-document-viewer {
+  display: block;
+  width: 100%;
+  min-height: 0;
   flex: 1;
-  place-items: center;
-  margin-top: 3rem;
-  background: var(--muted);
+  overflow: auto;
+  border: 0;
+  background: #fff;
+}
+
+.cera-document-viewer a {
+  display: block;
+}
+
+.cera-document-viewer a:focus-visible {
+  outline-offset: -3px;
+}
+
+.cera-document-viewer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cera-document-help {
+  flex-shrink: 0;
   color: var(--muted-foreground);
-}
-
-.cera-document-placeholder span {
   font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.cera-document-footer {
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
+  line-height: 1.5;
 }
 
 @keyframes home-notch-panel-in {
@@ -369,8 +381,9 @@
     left: 0.75rem;
   }
 
-  .cera-document {
-    min-height: calc(100dvh - 2rem);
+  .cera-document-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 

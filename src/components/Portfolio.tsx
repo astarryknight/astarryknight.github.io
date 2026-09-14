@@ -1,4 +1,6 @@
-import buschmanLabArtwork from "../assets/buschman-lab.png";
+// Restore alongside the Buschman media below when a preview is ready.
+// import buschmanLabArtwork from "../assets/buschman-lab.png";
+import engelLabManuscriptPreview from "../assets/engel-lab-manuscript-preview.png";
 import nandyLabPoster from "../assets/nandy-lab-poster.png";
 import stackfusePoster from "../assets/stackfuse-poster.png";
 import "./Portfolio.css";
@@ -60,14 +62,14 @@ const research: TimelineEntry[] = [
     period: "2025—Present",
     summary:
       "Developing neural models and synthetic retinal datasets to study visual processing and saccadic prediction at Princeton Neuroscience Institute.",
-    media: {
-      kind: "image",
-      src: buschmanLabArtwork,
-      alt: "Abstract neural network artwork from the Buschman Lab",
-      width: 813,
-      height: 626,
-      orientation: "portrait",
-    },
+    // media: {
+    //   kind: "image",
+    //   src: buschmanLabArtwork,
+    //   alt: "Abstract neural network artwork from the Buschman Lab",
+    //   width: 813,
+    //   height: 626,
+    //   orientation: "portrait",
+    // },
   },
   {
     category: "Research",
@@ -97,10 +99,20 @@ const research: TimelineEntry[] = [
     period: "Jan—May 2025",
     summary:
       "Neural compositionality and generalization research at Princeton Neuroscience Institute.",
+    links: [
+      {
+        label: "Manuscript",
+        href: "/documents/engel-lab-manuscript.pdf",
+      },
+    ],
     media: {
-      kind: "placeholder",
-      label: "Media pending — Engel Lab",
+      kind: "image",
+      src: engelLabManuscriptPreview,
+      alt: "First page of the manuscript Task-identity structure and interpopulation connectivity shape compositional geometry in recurrent neural networks, by John Girgis and Iman Wahle",
+      width: 1076,
+      height: 1382,
       orientation: "portrait",
+      treatment: "natural",
     },
   },
   {
