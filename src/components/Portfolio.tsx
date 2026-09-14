@@ -1,5 +1,6 @@
 // Restore alongside the Buschman media below when a preview is ready.
 // import buschmanLabArtwork from "../assets/buschman-lab.png";
+import brainAgePaperPreview from "../assets/brain-age-paper-preview.png";
 import engelLabManuscriptPreview from "../assets/engel-lab-manuscript-preview.png";
 import nandyLabPoster from "../assets/nandy-lab-poster.png";
 import stackfusePoster from "../assets/stackfuse-poster.png";
@@ -88,9 +89,13 @@ const research: TimelineEntry[] = [
       },
     ],
     media: {
-      kind: "placeholder",
-      label: "Media pending — Brain Age Prediction",
+      kind: "image",
+      src: brainAgePaperPreview,
+      alt: "First page of End-to-End Hyperbolic Graph Neural Networks for Brain Age Prediction with MEG Data, by John Girgis and Mengjia Xu",
+      width: 1228,
+      height: 1588,
       orientation: "portrait",
+      treatment: "natural",
     },
   },
   {
