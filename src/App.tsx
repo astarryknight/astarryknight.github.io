@@ -86,9 +86,11 @@ export default function App() {
             github ↗
           </a>
           <a
-            aria-disabled="true"
-            title="CV coming soon"
-            className="cursor-default rounded-sm underline decoration-dotted underline-offset-4 opacity-60"
+            href="/documents/john-girgis-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open John Girgis's CV (PDF)"
+            className="rounded-sm underline decoration-dotted underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             cv ↗
           </a>
