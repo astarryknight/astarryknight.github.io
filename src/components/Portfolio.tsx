@@ -1,3 +1,4 @@
+import type { Ref } from "react";
 // Restore alongside the Buschman media below when a preview is ready.
 // import buschmanLabArtwork from "../assets/buschman-lab.png";
 import brainAgePaperPreview from "../assets/brain-age-paper-preview.png";
@@ -38,6 +39,7 @@ interface TimelineEntry {
 
 interface PortfolioProps {
   onBack: () => void;
+  headingRef?: Ref<HTMLHeadingElement>;
 }
 
 const research: TimelineEntry[] = [
@@ -222,19 +224,22 @@ function WorkEntry({ entry }: { entry: TimelineEntry }) {
   );
 }
 
-export default function Portfolio({ onBack }: PortfolioProps) {
+export default function Portfolio({ onBack, headingRef }: PortfolioProps) {
   return (
     <div className="portfolio-page">
       <main className="portfolio-main">
-        <h1 className="portfolio-sr-only">Research by John Girgis</h1>
+        <header className="portfolio-header">
+          <button
+            type="button"
+            onClick={onBack}
+            className="portfolio-home"
+          >
+            ← Home
+          </button>
 
-        <button
-          type="button"
-          onClick={onBack}
-          className="portfolio-home"
-        >
-          ← Home
-        </button>
+          <h1 ref={headingRef} tabIndex={-1}>Inside my Brain</h1>
+          <p>Research and personal projects I’ve worked on.</p>
+        </header>
 
         <div className="portfolio-timeline">
           {research.map((entry) => (
